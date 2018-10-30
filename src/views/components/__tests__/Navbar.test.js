@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Drawer from '../Drawer';
-import Header from '../Header';
-import Link from '../Link';
+import Drawer from '../Navbar/Drawer';
+import Header from '../Navbar/Header';
+import Link from '../Navbar/Link';
 
 test('Navbar Drawer has correct title', () => {
   const container = document.createElement('div');

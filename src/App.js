@@ -2,6 +2,9 @@ import React, { Component, Fragment } from 'react';
 import Navbar from './views/components/Navbar';
 import Layout from './views/components/Layout';
 import NavbarLink from './views/components/Navbar/Link';
+import About from './views/pages/About';
+
+import './App.css';
 
 const NavbarLinks = () => (
   <Fragment>
@@ -16,8 +19,9 @@ class App extends Component {
     return (
       <Layout>
         <Navbar title="Portfolio" links={<NavbarLinks />} />
+
         <main className="mdl-layout__content">
-          <div className="page-content" />
+          <About />
         </main>
       </Layout>
     );
