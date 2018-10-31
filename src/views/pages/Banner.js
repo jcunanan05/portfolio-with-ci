@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid, { Cell } from '../components/Grid';
+import Icon from '../components/Icon'
 
 import './Banner.css';
 
@@ -9,15 +10,18 @@ const Hero = () => (
       <h1 className="Banner__title">Jonathan Cunanan</h1>
       <h2 className="Banner__subtitle">Frontend Developer</h2>
     </div>
+    <div className="social-media">
+      <Icon className="fab fa-github-alt" href="https://github.com/jcunanan05" />
+      <Icon className="fab fa-linkedin" href="https://www.linkedin.com/in/cunananjonathan/" />
+      <Icon className="fab fa-free-code-camp" href="https://www.freecodecamp.org/jcunanan05" />
+      <Icon className="fab fa-codepen" href="https://codepen.io/jcunanan05/" />
+    </div>
   </Cell>
 );
 
 const ImageOverlay = () => (
   <span className="image__overlay">
-    <img
-      src="/images/sand"
-      alt=""
-    />
+    <img src="/images/sand" alt="" />
   </span>
 );
 

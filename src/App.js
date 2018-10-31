@@ -3,6 +3,7 @@ import Navbar from './views/components/Navbar';
 import Layout from './views/components/Layout';
 import NavbarLink from './views/components/Navbar/Link';
 import Banner from './views/pages/Banner';
+import Projects from './views/pages/Projects';
 
 import './App.css';
 
@@ -22,6 +23,7 @@ class App extends Component {
 
         <main className="mdl-layout__content">
           <Banner />
+          <Projects />
         </main>
       </Layout>
     );
