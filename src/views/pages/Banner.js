@@ -1,13 +1,13 @@
 import React from 'react';
 import Grid, { Cell } from '../components/Grid';
 
-import './About.css';
+import './Banner.css';
 
-const Banner = () => (
-  <Cell className="mdl-cell--12-col About__banner">
-    <div>
-      <h1 className="About__title">Jonathan Cunanan</h1>
-      <h2 className="About__subtitle">Frontend Developer</h2>
+const Hero = () => (
+  <Cell className="mdl-cell--12-col Banner__hero">
+    <div className="titles">
+      <h1 className="Banner__title">Jonathan Cunanan</h1>
+      <h2 className="Banner__subtitle">Frontend Developer</h2>
     </div>
   </Cell>
 );
@@ -23,11 +23,11 @@ const ImageOverlay = () => (
 
 const ColorOverlay = () => <span className="color__overlay" />;
 
-export default function About() {
+export default function Banner() {
   return (
-    <section className="About" id="about">
+    <section className="Banner" id="banner">
       <Grid>
-        <Banner />
+        <Hero />
       </Grid>
       <ImageOverlay />
       <ColorOverlay />

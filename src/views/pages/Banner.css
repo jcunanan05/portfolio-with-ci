@@ -1,11 +1,11 @@
-.About {
+.Banner {
   display: flex;
   position: relative;
   flex-direction: column;
   min-height: 18rem;
 }
 
-.About > div {
+.Banner > div {
   flex: 1;
   z-index: 999;
   padding: 0;
@@ -13,35 +13,35 @@
   max-width: 80rem;
 }
 
-.About__cell {
+.Banner__cell {
   padding: 0 1rem;
 }
 
-.About__title {
+.Banner__title {
   margin-bottom: 0;
   font-size: 2.6rem;
   font-weight: 500;
 }
 
-.About__subtitle {
+.Banner__subtitle {
   font-weight: 400;
   font-size: 2rem;
   margin-top: 0;
 }
 
-.About__banner {
+.Banner__hero {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.About__banner > div {
+.Banner__hero > div {
   text-align: center;
 }
 
 /* overlays */
 
-.About > .color__overlay {
+.Banner > .color__overlay {
   position: absolute;
   background: #efefef73;
   width: 100%;
@@ -49,13 +49,13 @@
   height: 100%;
 }
 
-.About > .image__overlay {
+.Banner > .image__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.About > .image__overlay img {
+.Banner > .image__overlay img {
   width: 100%;
   height: 100%;
   object-fit: cover;

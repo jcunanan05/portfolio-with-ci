@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Navbar from './views/components/Navbar';
 import Layout from './views/components/Layout';
 import NavbarLink from './views/components/Navbar/Link';
-import About from './views/pages/About';
+import Banner from './views/pages/Banner';
 
 import './App.css';
 
@@ -21,7 +21,7 @@ class App extends Component {
         <Navbar title="Jonathan C." links={<NavbarLinks />} />
 
         <main className="mdl-layout__content">
-          <About />
+          <Banner />
         </main>
       </Layout>
     );
