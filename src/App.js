@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <Navbar title="Portfolio" links={<NavbarLinks />} />
+        <Navbar title="Jonathan C." links={<NavbarLinks />} />
 
         <main className="mdl-layout__content">
           <About />

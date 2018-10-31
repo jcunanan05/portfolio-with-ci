@@ -1,0 +1,63 @@
+.About {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 18rem;
+}
+
+.About > div {
+  flex: 1;
+  z-index: 999;
+  padding: 0;
+  width: 100%;
+  max-width: 80rem;
+}
+
+.About__cell {
+  padding: 0 1rem;
+}
+
+.About__title {
+  margin-bottom: 0;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.About__subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.About__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.About__banner > div {
+  text-align: center;
+}
+
+/* overlays */
+
+.About > .color__overlay {
+  position: absolute;
+  background: #efefef73;
+  width: 100%;
+  z-index: 0;
+  height: 100%;
+}
+
+.About > .image__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.About > .image__overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
