@@ -4,11 +4,11 @@ import Icon from '../components/Icon'
 
 import './Banner.css';
 
-const Hero = () => (
+const Hero = ({ title, subtitle }) => (
   <Cell className="mdl-cell--12-col Banner__hero">
     <div className="titles">
-      <h1 className="Banner__title">Jonathan Cunanan</h1>
-      <h2 className="Banner__subtitle">Frontend Developer</h2>
+      <h1 className="Banner__title">{title}</h1>
+      <h2 className="Banner__subtitle">{subtitle}</h2>
     </div>
     <div className="social-media">
       <Icon className="fab fa-github-alt" href="https://github.com/jcunanan05" />
@@ -31,7 +31,7 @@ export default function Banner() {
   return (
     <section className="Banner" id="banner">
       <Grid>
-        <Hero />
+        <Hero title="Jonathan Cunanan" subtitle="Front-end Developer" />
       </Grid>
       <ImageOverlay />
       <ColorOverlay />
