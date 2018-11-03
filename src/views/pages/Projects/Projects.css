@@ -1,0 +1,12 @@
+.Project__cell {
+  display: flex;
+}
+
+.Project__card {
+  margin: 0 auto;
+}
+
+.Project__icon {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+}
