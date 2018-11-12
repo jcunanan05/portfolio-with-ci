@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grid, { Cell } from '../../components/Grid';
+import Container from '../../components/Container';
 import createClient from '../../../libs/contentful';
 import Project from './ProjectCard';
 import './Projects.css';
@@ -45,17 +46,19 @@ export default class Projects extends Component {
   render() {
     return (
       <section className="Projects" id="projects">
-        <Grid>
-          <Cell className="mdl-cell--12-col">
-            <h2>Projects</h2>
-          </Cell>
+        <Container>
+          <Grid>
+            <Cell className="mdl-cell--12-col">
+              <h2>Projects</h2>
+            </Cell>
 
-          <Cell className="mdl-cell--12-col Project__card-list">
-            <Grid>
-              {this.renderProjects(this.state.projects)}
-            </Grid>
-          </Cell>
-        </Grid>
+            <Cell className="mdl-cell--12-col Project__card-list">
+              <Grid>
+                {this.renderProjects(this.state.projects)}
+              </Grid>
+            </Cell>
+          </Grid>
+        </Container>
       </section>
     );
   }

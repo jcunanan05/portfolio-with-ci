@@ -1,21 +1,28 @@
 import React from 'react';
 import Grid, { Cell } from '../components/Grid';
-import Icon from '../components/Icon';
+import Container from '../components/Container';
+import Content from '../components/Content';
+import processMarkdown from '../../libs/marked';
 
 import './About.css';
 
-export default function Banner() {
+const markdownText = `
+I'm Jonathan Cunanan, I offer front-end solutions and consulting. I spend my time exploring and developing solutions for websites and web apps. I use a wide variety of frameworks, tools, workflows, to develop production quality apps with ease.
+`;
+
+export default function About() {
   return (
     <section className="About" id="about">
-      <Grid>
-        <Cell className="mdl-cell--12-col">
-          <h2>About</h2>
-        </Cell>
-        <Cell className="mdl-cell--12-col">
-          <Icon className="far fa-smile-beam" />
-          <p>I am passionate about learning, especially web development. I also like to talk about what I learned because it also trains how I think.</p>
-        </Cell>
-      </Grid>
+      <Container>
+        <Grid>
+          <Cell className="mdl-cell--12-col">
+            <h2>About Me</h2>
+          </Cell>
+          <Cell className="mdl-cell--12-col">
+            <Content dangerouslySetInnerHTML={{__html: processMarkdown(markdownText)}}></Content>
+          </Cell>
+        </Grid>
+      </Container>
     </section>
   );
 }
