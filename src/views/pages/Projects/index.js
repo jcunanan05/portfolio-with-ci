@@ -8,11 +8,10 @@ export default class Projects extends Component {
   constructor(props) {
     super(props);
     this.loadProjects = this.loadProjects.bind(this);
+    this.state = {
+      projects: []
+    };
   }
-
-  state = {
-    projects: []
-  };
 
   componentDidMount() {
     this.loadProjects();
@@ -50,7 +49,12 @@ export default class Projects extends Component {
           <Cell className="mdl-cell--12-col">
             <h2>Projects</h2>
           </Cell>
-          {this.renderProjects(this.state.projects)}
+
+          <Cell className="mdl-cell--12-col Project__card-list">
+            <Grid>
+              {this.renderProjects(this.state.projects)}
+            </Grid>
+          </Cell>
         </Grid>
       </section>
     );

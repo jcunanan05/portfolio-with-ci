@@ -16,7 +16,7 @@ export default function Card({ title, bodyText, footer, className='' }) {
   return (
     <article className={`${className} mdl-card mdl-shadow--2dp`}>
       <header className="mdl-card__title mdl-card--expand">
-        <h2 className="mdl-card__title-text">{title}</h2>
+        <h2 className="mdl-card__title-text Card__title">{title}</h2>
       </header>
       <div className="mdl-card__supporting-text">{bodyText}</div>
       <footer className="mdl-card__actions mdl-card--border Card__footer">
