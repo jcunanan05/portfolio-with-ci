@@ -1,33 +1,11 @@
-import React, { Component, Fragment } from 'react';
-import Navbar from './views/components/Navbar';
-import Layout from './views/components/Layout';
-import NavbarLink from './views/components/Navbar/Link';
-import Banner from './views/pages/Banner';
-import About from './views/pages/About';
-import Projects from './views/pages/Projects';
-
-import './App.css';
-
-const NavbarLinks = () => (
-  <Fragment>
-    <NavbarLink title="About" href="#about"/>
-    <NavbarLink title="Projects" href="#projects" />
-    <NavbarLink title="Skills" href="#skills"/>
-  </Fragment>
-);
+import React, { Component } from 'react'
 
 class App extends Component {
   render() {
-    return (
-      <Layout>
-        <Navbar title="Jonathan C." links={<NavbarLinks />} />
-
-        <main className="mdl-layout__content">
-          <Banner />
-          <About />
-          <Projects />
-        </main>
-      </Layout>
+    return(
+      <div className="App">
+        <h1>Hello World</h1>
+      </div>
     );
   }
 }
