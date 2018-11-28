@@ -1,0 +1,25 @@
+.footer.footer.is-dark {
+  background-color: #0a0a0a;
+}
+
+.footer.is-dark h1,
+.footer.is-dark h2,
+.footer.is-dark h3,
+.footer.is-dark h4,
+.footer.is-dark h5,
+.footer.is-dark h6,
+.footer.is-dark p,
+.footer.is-dark span,
+.footer.is-dark div,
+.footer.is-dark section,
+.footer.is-dark i {
+  color: #fff;
+}
+
+.footer.is-dark a {
+  color: #63a4ff;
+}
+
+.footer.is-dark a:hover {
+  color: #5088d6;
+}

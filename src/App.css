@@ -1,3 +1,7 @@
-section:nth-child(2n) {
-  background-color: #ececec;
+html {
+  background-color: #0a0a0a;
+}
+
+body {
+  background-color: white;
 }
