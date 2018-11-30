@@ -21,7 +21,7 @@ class Navbar extends Component {
     const { menu } = this.props;
     return (
       <nav
-        className="navbar is-fixed-top is-black"
+        className="Navbar navbar is-fixed-top is-black"
         role="navigation"
         aria-label="main navigation"
       >

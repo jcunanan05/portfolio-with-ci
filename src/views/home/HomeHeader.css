@@ -1,0 +1,9 @@
+.Hero .title {
+  font-weight: 300;
+  font-size: 2.7rem;
+}
+
+.Hero .subtitle {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+}

@@ -1,12 +1,15 @@
 import React from 'react';
 
-export default function Hero({ title, subtitle }) {
+import './Hero.css';
+
+export default function Hero({ title, subtitle, children }) {
   return (
-    <header className="hero is-medium is-info is-bold">
+    <header className="Hero hero is-medium is-info is-bold">
       <div className="hero-body">
-        <div className="container">
+        <div className="container has-text-centered">
           <h1 className="title">{title}</h1>
           <h2 className="subtitle">{subtitle}</h2>
+          {children}
         </div>
       </div>
     </header>

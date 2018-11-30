@@ -1,25 +1,25 @@
-.footer.footer.is-dark {
+.Footer.is-dark {
   background-color: #0a0a0a;
 }
 
-.footer.is-dark h1,
-.footer.is-dark h2,
-.footer.is-dark h3,
-.footer.is-dark h4,
-.footer.is-dark h5,
-.footer.is-dark h6,
-.footer.is-dark p,
-.footer.is-dark span,
-.footer.is-dark div,
-.footer.is-dark section,
-.footer.is-dark i {
+.Footer.is-dark h1,
+.Footer.is-dark h2,
+.Footer.is-dark h3,
+.Footer.is-dark h4,
+.Footer.is-dark h5,
+.Footer.is-dark h6,
+.Footer.is-dark p,
+.Footer.is-dark span,
+.Footer.is-dark div,
+.Footer.is-dark section,
+.Footer.is-dark i {
   color: #fff;
 }
 
-.footer.is-dark a {
+.Footer.is-dark a {
   color: #63a4ff;
 }
 
-.footer.is-dark a:hover {
+.Footer.is-dark a:hover {
   color: #5088d6;
 }

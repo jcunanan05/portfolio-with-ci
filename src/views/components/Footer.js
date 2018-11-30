@@ -4,7 +4,7 @@ import './Footer.css';
 
 export default function Footer() {
   return (
-    <footer className="footer is-dark" id="footer">
+    <footer className="Footer footer is-dark" id="footer">
       <div className="container content">
         <div className="columns">
           <div className="column">
