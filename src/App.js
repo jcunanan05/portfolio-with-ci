@@ -6,6 +6,7 @@ import Section from './views/components/Section';
 import Content from './views/components/Content';
 import Footer from './views/components/Footer';
 import HomeHeader from './views/home/HomeHeader';
+import ProjectsSection from './views/home/ProjectsSection';
 import { about } from './content/index';
 
 import './App.css';
@@ -20,6 +21,8 @@ class App extends Component {
         <Section title="About" name="about">
           <Content className="content" __html={processMarkdown(about)} />
         </Section>
+
+        <ProjectsSection />
 
         <Footer />
       </div>

@@ -1,3 +1,14 @@
-.hero .subtitle {
+.Hero .subtitle {
   margin-bottom: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .Hero {
+    height: 50vh;
+  }
+
+  .hero-body {
+    display: flex;
+    align-items: center;
+  }
 }
