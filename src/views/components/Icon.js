@@ -8,7 +8,7 @@ function Icon({ className = '' }) {
   return <i className={`Icon ${className}`} />;
 }
 
-export function IconLink({ className = '', href = null, icon }) {
+export function IconLink({ className = '', href = null, icon, children }) {
   return (
     <a
       className={`IconLink ${className}`}
@@ -16,6 +16,7 @@ export function IconLink({ className = '', href = null, icon }) {
       target="_blank noopener noreferrer"
     >
       <Icon className={icon} />
+      {children}
     </a>
   );
 }

@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Navbar extends Component {
   state = { isExpanded: false };
 
-  toggleBurger = () => {
+  toggleBurger = event => {
+    event.preventDefault();
     this.setState(currentState => {
       return { isExpanded: !currentState.isExpanded };
     });
@@ -17,7 +18,7 @@ class Navbar extends Component {
   render() {
     const { isExpanded } = this.state;
     const { toggleBurger, handleNavbarMenuClick } = this;
-    const isActive = isExpanded ? 'is-active' : null;
+    const isActive = isExpanded ? 'is-active' : '';
     const { menu } = this.props;
     return (
       <nav

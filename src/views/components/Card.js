@@ -14,6 +14,8 @@ export default class Card extends Component {
       cloneElement(childElement)
     );
 
-    return <div className="card">{childrenElements}</div>;
+    const { className = ''} = this.props;
+
+    return <div className={`card ${className}`}>{childrenElements}</div>;
   }
 }
