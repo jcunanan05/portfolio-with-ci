@@ -1,27 +1,16 @@
 import React from 'react';
 import Section from '../components/Section';
 import Content from '../components/Content';
-import Card from '../components/Card';
-import { IconLink } from '../components/Icon';
+import ProjectCard from './ProjectCard';
 import { projects } from '../../content/index';
 
 const CardExample = () => (
-  <div className="column is-4">
-    <Card>
-      <Card.Content>
-        <p className="title is-4">Random Quote Machine</p>
-        <p className="subtitle is-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nisi
-        </p>
-      </Card.Content>
-      <Card.Footer>
-        <div className="card-footer-item">
-          <a className="button is-outlined is-link" href="https://google.com">Visit Site</a>
-          <IconLink icon="fab fa-github" href="https://codepen.io/jcunanan05/" />
-        </div>
-      </Card.Footer>
-    </Card>
-  </div>
+  <ProjectCard
+    title="Random Quote Machine"
+    description="Very great example of Random Quote Machine"
+    linkToSite="https://github.com/jcunanan05"
+    linkToCode="https://github.com/jcunanan05"
+  />
 );
 
 export default function ProjectsSection() {

@@ -8,7 +8,7 @@ function Icon({ className = '' }) {
   return <i className={`Icon ${className}`} />;
 }
 
-export function IconLink({ className = '', href = null, icon, children }) {
+export function IconLink({ className = '', href, icon, children }) {
   return (
     <a
       className={`IconLink ${className}`}

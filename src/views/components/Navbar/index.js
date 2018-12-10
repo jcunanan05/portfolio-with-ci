@@ -3,11 +3,15 @@ import React, { Component } from 'react';
 class Navbar extends Component {
   state = { isExpanded: false };
 
-  toggleBurger = event => {
-    event.preventDefault();
+  toggleBurger = () => {
     this.setState(currentState => {
       return { isExpanded: !currentState.isExpanded };
     });
+  }
+
+  handleBurgerClick = event => {
+    event.preventDefault();
+    this.toggleBurger();
   };
 
   handleNavbarMenuClick = event => {
@@ -17,7 +21,7 @@ class Navbar extends Component {
 
   render() {
     const { isExpanded } = this.state;
-    const { toggleBurger, handleNavbarMenuClick } = this;
+    const { handleBurgerClick, handleNavbarMenuClick } = this;
     const isActive = isExpanded ? 'is-active' : '';
     const { menu } = this.props;
     return (
@@ -33,7 +37,7 @@ class Navbar extends Component {
             </a>
 
             <a
-              onClick={toggleBurger}
+              onClick={handleBurgerClick}
               role="button"
               href="/#"
               className={`navbar-burger ${isActive}`}

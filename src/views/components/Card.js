@@ -16,6 +16,6 @@ export default class Card extends Component {
 
     const { className = ''} = this.props;
 
-    return <div className={`card ${className}`}>{childrenElements}</div>;
+    return <div className={`Card card ${className}`}>{childrenElements}</div>;
   }
 }
