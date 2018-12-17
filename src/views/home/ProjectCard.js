@@ -1,13 +1,15 @@
 import React from 'react';
 import Card from '../components/Card';
 import { IconLink } from '../components/Icon';
+import Tags from '../components/Tags';
 import './ProjectCard.css';
 
 export default function ProjectCard({
   title,
   description,
   linkToSite,
-  linkToCode
+  linkToCode,
+  tags
 }) {
   const ProjectCodeButton = () => {
     if (!linkToCode) return null;
@@ -15,7 +17,7 @@ export default function ProjectCard({
       <IconLink
         href={linkToCode}
         className="ProjectCodeButton button is-outlined is-link"
-        icon="fab fa-github ProjectCodeButton__icon"
+        icon="fab fa-github Icon"
       >
         Code
       </IconLink>
@@ -27,6 +29,7 @@ export default function ProjectCard({
         <Card.Content>
           <p className="title is-4">{title}</p>
           <p className="subtitle is-6">{description}</p>
+          <Tags items={tags} />
         </Card.Content>
         <Card.Footer>
           <div className="card-footer-item is-block">

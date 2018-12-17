@@ -1,4 +1,8 @@
-.ProjectCodeButton__icon {
+.ProjectCodeButton .Icon {
   margin: 0 0.2rem 0 0;
   font-size: 1.2rem;
+}
+
+.ProjectCard__container {
+  display: flex;
 }

@@ -1,29 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Section from '../components/Section';
 import Content from '../components/Content';
 import ProjectCard from './ProjectCard';
 import { projects } from '../../content/index';
+import * as contentful from 'contentful';
+import defaultConfig from '../../libs/contentful';
 
-const CardExample = () => (
-  <ProjectCard
-    title="Random Quote Machine"
-    description="Very great example of Random Quote Machine"
-    linkToSite="https://github.com/jcunanan05"
-    linkToCode="https://github.com/jcunanan05"
-  />
-);
+export default class ProjectsSection extends Component {
+  state = {
+    projects: []
+  };
 
-export default function ProjectsSection() {
-  return (
-    <Section title="Projects" name="projects">
-      <Content __html={projects.intro} />
-      <div className="columns is-multiline">
-        <CardExample />
-        <CardExample />
-        <CardExample />
-        <CardExample />
-        <CardExample />
-      </div>
-    </Section>
-  );
+  componentDidMount() {
+    this.fetchProjectCards();
+  }
+
+  fetchProjectCards = async () => {
+    const client = contentful.createClient(defaultConfig);
+    const entries = await client.getEntries({
+      content_type: 'posts'
+    });
+
+    this.setState({ projects: entries.items });
+  };
+
+  renderProjectCards = () => {
+    if (!this.state.projects) return null;
+    return this.state.projects.map(project => (
+      <ProjectCard
+        key={project.sys.id}
+        title={project.fields.title}
+        description={project.fields.content}
+        linkToSite={project.fields.url}
+        linkToCode={project.fields.codeUrl}
+        tags={project.fields.tags}
+      />
+    ));
+  };
+
+  render() {
+    return (
+      <Section title="Projects" name="projects">
+        <Content __html={projects.intro} />
+        <div className="columns is-multiline">{this.renderProjectCards()}</div>
+      </Section>
+    );
+  }
 }
