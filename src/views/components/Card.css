@@ -1,0 +1,4 @@
+/* expand card content when stretched */
+.Card__content {
+  flex: 1;
+}

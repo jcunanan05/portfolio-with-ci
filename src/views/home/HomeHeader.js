@@ -8,10 +8,7 @@ export default function Header() {
   return (
     <Hero title="Jonathan Cunanan" subtitle="Front-end Developer">
       <div className="Hero__social">
-        <IconLink
-          icon="fab fa-github-alt"
-          href="https://github.com/jcunanan05"
-        />
+        <IconLink icon="fab fa-github" href="https://github.com/jcunanan05" />
         <IconLink
           icon="fab fa-linkedin"
           href="https://www.linkedin.com/in/cunananjonathan/"

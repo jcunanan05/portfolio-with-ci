@@ -7,7 +7,7 @@ class Navbar extends Component {
     this.setState(currentState => {
       return { isExpanded: !currentState.isExpanded };
     });
-  }
+  };
 
   handleBurgerClick = event => {
     event.preventDefault();
@@ -23,7 +23,7 @@ class Navbar extends Component {
     const { isExpanded } = this.state;
     const { handleBurgerClick, handleNavbarMenuClick } = this;
     const isActive = isExpanded ? 'is-active' : '';
-    const { menu } = this.props;
+    const { menu, brand } = this.props;
     return (
       <nav
         className="Navbar navbar is-fixed-top is-black"
@@ -33,7 +33,7 @@ class Navbar extends Component {
         <div className="container">
           <div className="navbar-brand">
             <a href="/#" className="navbar-item">
-              Brand
+              {brand}
             </a>
 
             <a
@@ -54,9 +54,7 @@ class Navbar extends Component {
             onClick={handleNavbarMenuClick}
             className={`navbar-menu ${isActive}`}
           >
-            <div className="navbar-end">
-              { menu }
-            </div>
+            <div className="navbar-end">{menu}</div>
           </div>
         </div>
       </nav>

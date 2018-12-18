@@ -24,7 +24,7 @@ export default function ProjectCard({
     );
   };
   return (
-    <div className="column is-4">
+    <div className="column is-4 ProjectCard__wrapper">
       <Card className="ProjectCard">
         <Card.Content>
           <p className="title is-4">{title}</p>

@@ -3,3 +3,8 @@
   padding: 0.3rem;
   margin: 0 0.2rem 0.2rem 0;
 }
+
+.Tag:hover {
+  border-color: #3273dc;
+  color: #3273dc;
+}

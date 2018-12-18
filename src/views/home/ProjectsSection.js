@@ -18,7 +18,8 @@ export default class ProjectsSection extends Component {
   fetchProjectCards = async () => {
     const client = contentful.createClient(defaultConfig);
     const entries = await client.getEntries({
-      content_type: 'posts'
+      content_type: 'posts',
+      'fields.type': 'project'
     });
 
     this.setState({ projects: entries.items });
