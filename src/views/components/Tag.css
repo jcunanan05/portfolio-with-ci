@@ -1,7 +1,8 @@
 .Tag {
-  border: 1px solid black;
+  border: 1px solid #6d6d6d;
   padding: 0.3rem;
   margin: 0 0.2rem 0.2rem 0;
+  color: #6d6d6d;
 }
 
 .Tag:hover {
