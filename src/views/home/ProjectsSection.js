@@ -3,9 +3,9 @@ import Section from '../components/Section';
 import Content from '../components/Content';
 import ProjectCard from './ProjectCard';
 import { projects } from '../../content/index';
-// import * as contentful from 'contentful';
-// import defaultConfig from '../../libs/contentful';
-import entries from '../../content/projects.js';
+import * as contentful from 'contentful';
+import defaultConfig from '../../libs/contentful';
+// import entries from '../../content/projects.js';
 
 export default class ProjectsSection extends Component {
   state = {
@@ -17,11 +17,11 @@ export default class ProjectsSection extends Component {
   }
 
   fetchProjectCards = async () => {
-    // const client = contentful.createClient(defaultConfig);
-    // const entries = await client.getEntries({
-    //   content_type: 'posts',
-    //   'fields.type': 'project'
-    // });
+    const client = contentful.createClient(defaultConfig);
+    const entries = await client.getEntries({
+      content_type: 'posts',
+      'fields.type': 'project'
+    });
     this.setState({ projects: entries.items });
   };
 
